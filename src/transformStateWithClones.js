@@ -22,9 +22,12 @@ function transformStateWithClones(state, actions) {
         }
         break;
 
-      default:
+      case 'clear':
         stateCopy = {};
         break;
+
+      default:
+        continue;
     }
 
     stateHistory.push({ ...stateCopy });
